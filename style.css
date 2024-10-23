@@ -1,0 +1,747 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    border-radius: 0px;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 200;
+    border: none;
+}
+
+body
+{
+    height: 100dvh;
+    width: 100dvw;
+}
+#background-video 
+{
+    width: 100dvw;
+    height: 100dvh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.taskbar
+{
+    width: 100dvw;
+    height: 3.5rem;
+    background-color: rgba(32, 32, 32, .3);
+    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(70px);
+    position: absolute;
+    bottom: 0;
+    border-radius: 0;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    z-index: 10;
+}
+
+.taskbar .left
+{
+    align-items: center;
+    justify-content: center;
+    padding-left: 16px;
+    width: 174px;
+}
+
+.weather
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.icon
+{
+    height: 24px;
+    width: 24px;
+    background-image: url(icons/weather.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+}
+
+.information
+{
+    color: white;
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.taskbar .middle
+{
+    align-items: center;
+    justify-content: center;
+}
+
+.taskbar-apps
+{
+    height: 100%;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 8px;
+}
+
+.app1
+{
+    width: 40px;
+    height: 40px;
+    background-image: url(icons/windows\ icon.svg);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.app2
+{
+    width: 40px;
+    height: 40px;
+    background-image: url(icons/Search\ Icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+.app3
+{
+    width: 40px;
+    height: 40px;
+    background-image: url(icons/Wedget\ Icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+.app4
+{
+    width: 40px;
+    height: 40px;
+    background-image: url(icons/folder\ Icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+.app5
+{
+    width: 40px;
+    height: 40px;
+    background-image: url(icons/Edge\ Icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+.app6
+{
+    width: 40px;
+    height: 40px;
+    background-image: url(icons/figma.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+
+
+.taskbar .right
+{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-right: 16px;
+}
+
+.quick-settings
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.up-icon
+{
+    height: 24px;
+    width: 24px;
+    background-image: url(sml-icons/up.svg);
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    
+}
+
+.language
+{
+    height: 38px;
+    width: 34px;
+    background-image: url(sml-icons/ENG\ IN.svg);
+    background-position: center;
+    background-size: 24px;
+    background-repeat: no-repeat;
+}
+
+.icons
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.wifi
+{
+    height: 20px;
+    width: 20px;
+    background-image: url(sml-icons/WiFi.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+.volume
+{
+    height: 20px;
+    width: 20px;
+    background-image: url(sml-icons/Speaker.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+}
+.battery
+{
+    height: 20px;
+    width: 20px;
+    background-image: url(sml-icons/Battery.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.notification
+{
+    height: 24px;
+    width: 24px;
+    background-image: url(sml-icons/Bell.svg);
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+.startmenu
+{
+    position: absolute;
+    left: 30vw;
+    bottom: -90vh;
+    width: 40.625rem;
+    height: 40.5rem;
+    background-color: rgba(32, 32, 32, .3);
+    backdrop-filter: blur(200px);
+    border-radius: 8.75px;
+    transition: 0.3s ease-in;
+    transition: 0.13s ease-out;
+}
+
+.search-bar
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 28px;
+    margin-left: 24px;
+    margin-right: 24px;
+    height: 30px;
+    border-radius: 5px;
+    border-bottom: 2px solid rgba(96, 205, 255, 1);
+    background-color: rgba(30, 30, 30, .3);
+    backdrop-filter: blur(70px);
+    align-items: center;
+    color: rgba(255, 255, 255,.7);
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 200;
+
+}
+
+.search-placeholder
+{
+    align-content: center;
+    justify-content: center;
+    padding-left: 16px;
+}
+
+.search-placeholder input
+{
+    width: 400px;
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255,.7);
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.search-placeholder input::placeholder
+{
+    color: rgba(255, 255, 255,.7);
+}
+
+.search-placeholder input:focus
+{
+    border: none;
+    outline: none;
+}
+
+.pinned-apps
+{
+    margin-top: 36px;
+    color: white;
+}
+
+.rcmnd-apps
+{
+    margin-top: 36px;
+    color: white;
+}
+
+.pinned-apps-title
+{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.rcmnd-apps-title
+{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.startmenu .pinned-apps-div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.startmenu .pinned-apps-div .apps
+{
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 12px;
+    border-radius: 4px;
+}
+
+.startmenu .pinned-apps-div .apps:hover
+{
+    background-color:rgba(255, 255, 255,.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+
+.startmenu .pinned-apps-div .apps img
+{
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+}
+
+.startmenu .pinned-apps-div .apps p
+{
+    text-align: center;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+.pinned-apps-div .row01
+{
+    display: flex;
+}
+
+.pinned-apps-div .row02
+{
+    display: flex;
+}
+
+.pinned-apps-div .row03
+{
+    display: flex;
+}
+
+.all-apps
+{
+    background-color: rgba(255, 255, 255,.2);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.all-apps:hover
+{
+    background-color: rgba(0, 0, 0,.2);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.more-apps:hover
+{
+    background-color: rgba(0, 0, 0,.2);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.more-apps
+{
+    background-color: rgba(255, 255, 255,.2);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.txt-pinned
+{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.txt-rcmnd
+{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    background-color:rgba(0, 0, 0,.2);
+    padding: 16px 0px;
+}
+
+.footer .right
+{
+    margin-right: 48px;
+}
+
+
+.footer .left
+{
+    display: flex;
+    width: auto;
+    margin-left: 48px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.footer .left:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: pointer;
+}
+
+.footer .user-icon
+{
+    width: 36px;
+    height: 36px;
+    background-color: whitesmoke;
+    border-radius: 200px;
+    transition: 0.3s ease;
+}
+
+.footer .user-icon:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: none;
+}
+
+.footer .user-name
+{
+    margin-left: 12px;
+    color: white;
+}
+
+.footer .power-icon
+{
+    background-image: url(sml-icons/Power.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.footer .power-icon:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: pointer;
+}
+
+.rcmnd-apps-div .row01
+{
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+}
+
+.rcmnd-apps-div .toggle img
+{
+    height: 48px;
+    width: 48px;
+    border-radius: 4px;
+}
+
+.rcmnd-apps-div .toggle p
+{
+    margin-left: 8px;
+}
+
+.rcmnd-apps-div .toggle .rcmnd-txt
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.rcmnd-apps-div .toggle .rcmnd-txt .file-name
+{
+    font-size: 15px;
+}
+
+.rcmnd-apps-div .toggle .rcmnd-txt .time
+{
+    font-size: 13px;
+}
+
+.rcmnd-apps-div .toggle
+{
+    width: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.rcmnd-apps-div .toggle:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: pointer;
+}
+
+.lockscreen-time
+{
+    color: white;
+    font-size: 90px;
+    font-weight: 650;
+    text-align: center;
+    padding-top: 48px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.lockscreen-wedget
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ls-wedget-container
+{
+    background-color: rgba(0, 0, 0,.4);
+    border: 2px solid rgba(255, 255, 255,.2);
+    backdrop-filter: blur(20px);
+    width: 300px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 9vh;
+}
+
+.ls-wedget-header
+{
+    padding-top: 12px;
+    padding-left: 16px;
+    color: white;
+    font-weight: 500;
+
+}
+
+.ls-wedget-middle
+{
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 16px;
+}
+
+.ls-wedget-footer
+{
+    color: rgba(96, 205, 255, 1);
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 12px;
+    font-weight: 400;
+}
+
+.lockscreen-wedget .ls-wedget-middle .location
+{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.lockscreen-wedget .ls-wedget-middle .status
+{
+    color: rgb(0, 255, 0);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.lockscreen-wedget .ls-wedget-middle img
+{
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255,.2);
+}
+
+.ls-container
+{
+    backdrop-filter: blur(70px);
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.ls-main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30vh;
+}
+
+.ls-main .user-profile-icon
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 200px;
+    background-color: white;
+    padding: 12px;
+}
+
+.ls-main .user-profile-name
+{
+    padding: 12px;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+.password-placeholder
+{
+    align-content: center;
+    justify-content: center;
+    padding-left: 16px;
+}
+
+.password-placeholder input
+{
+    width: 400px;
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255,.7);
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.password-placeholder input::placeholder
+{
+    color: rgba(255, 255, 255,.7);
+}
+
+.password-placeholder input:focus
+{
+    border: none;
+    outline: none;
+}
+
+.password-bar
+{
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    border-bottom: 2px solid rgba(96, 205, 255, 1);
+    background-color: rgba(30, 30, 30, .3);
+    backdrop-filter: blur(70px);
+    align-items: center;
+    color: rgba(255, 255, 255,.7);
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 200;
+
+}
+
+.ls-main p
+{
+    color: white;
+    margin-top: 12px;
+}
+
+.ls-icons
+{
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.ls-icons-icon img
+{
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+
+
+
