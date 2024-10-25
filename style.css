@@ -58,16 +58,26 @@ body
     display: flex;
     align-items: center;
     gap: 0.833vw;
+    padding: 0.208vw;
+    border-radius: 0.208vw;
+    transition: 0.3s ease;
+}
+
+.weather:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: pointer;
 }
 
 .icon
 {
-    height: 2.222vh;
+    height: 1.25vw;
     width: 1.25vw;
     background-image: url(icons/weather.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 1.25vw;
+    padding-left: 0.208vw;
 }
 
 .information
@@ -93,64 +103,88 @@ body
     gap: 0.417vw;
 }
 
+#taskbar-app:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: pointer;
+}
+
 .app1
 {
+    padding: 0.208vw;
+    border-radius: 0.208vw;
     width: 2.083vw;
-    height: 3.704vh;
+    height: 2.083vw;
     background-image: url(icons/windows\ icon.svg);
     background-size: 1.563vw;
     background-position: center;
     background-repeat: no-repeat;
+    transition: 0.3s ease;
 }
 .app2
 {
+    padding: 0.208vw;
+    border-radius: 0.208vw;
     width: 2.083vw;
-    height: 3.704vh;
+    height: 2.083vw;
     background-image: url(icons/Search\ Icon.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-size: 1.563vw;
     background-position: center;
+    transition: 0.3s ease;
 }
 .app3
 {
+    padding: 0.208vw;
+    border-radius: 0.208vw;
     width: 2.083vw;
-    height: 3.704vh;
+    height: 2.083vw;
     background-image: url(icons/Wedget\ Icon.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-size: 1.563vw;
     background-position: center;
+    transition: 0.3s ease;
 }
 .app4
 {
+    padding: 0.208vw;
+    border-radius: 0.208vw;
     width: 2.083vw;
-    height: 3.704vh;
+    height: 2.083vw;
     background-image: url(icons/folder\ Icon.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-size: 1.563vw;
     background-position: center;
+    transition: 0.3s ease;
 }
 .app5
 {
+    padding: 0.208vw;
+    border-radius: 0.208vw;
     width: 2.083vw;
-    height: 3.704vh;
+    height: 2.083vw;
     background-image: url(icons/Edge\ Icon.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-size: 1.563vw;
     background-position: center;
+    transition: 0.3s ease;
 }
 .app6
 {
+    padding: 0.208vw;
+    border-radius: 0.208vw;
     width: 2.083vw;
-    height: 3.704vh;
+    height: 2.083vw;
     background-image: url(icons/figma.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-size: 1.563vw;
     background-position: center;
+    transition: 0.3s ease;
 }
 
 
@@ -173,23 +207,40 @@ body
 
 .up-icon
 {
-    height: 2.222vh;
+    height: 1.25vw;
     width: 1.25vw;
     background-image: url(sml-icons/up.svg);
     background-position: center;
     background-size: 1.042vw;
     background-repeat: no-repeat;
-    
+    padding: 0.208vw;
+    border-radius: 0.208vw;
+    transition: 0.3s ease;
+}
+
+.up-icon:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: pointer;
 }
 
 .language
 {
-    height: 3.519vh;
+    height: 1.771vw;
     width: 1.771vw;
     background-image: url(sml-icons/ENG\ IN.svg);
     background-position: center;
     background-size: 1.25vw;
     background-repeat: no-repeat;
+    padding: 0.208vw;
+    border-radius: 0.208vw;
+    transition: 0.3s ease;
+}
+
+.language:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: pointer;
 }
 
 .icons
@@ -198,11 +249,20 @@ body
     align-items: center;
     justify-content: center;
     gap: 0.208vw;
+    padding: 0.208vw;
+    border-radius: 0.208vw;
+    transition: 0.3s ease;
+}
+
+.icons:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: pointer;
 }
 
 .wifi
 {
-    height: 1.852vh;
+    height: 1.042vw;
     width: 1.042vw;
     background-image: url(sml-icons/WiFi.svg);
     background-position: center;
@@ -211,7 +271,7 @@ body
 }
 .volume
 {
-    height: 1.852vh;
+    height: 1.042vw;
     width: 1.042vw;
     background-image: url(sml-icons/Speaker.svg);
     background-position: center;
@@ -220,7 +280,7 @@ body
 }
 .battery
 {
-    height: 1.852vh;
+    height: 1.042vw;
     width: 1.042vw;
     background-image: url(sml-icons/Battery.svg);
     background-position: center;
@@ -230,12 +290,21 @@ body
 
 .notification
 {
-    height: 2.222vh;
+    height: 1.25vw;
     width: 1.25vw;
     background-image: url(sml-icons/Bell.svg);
     background-position: center;
     background-size: 1.042vw;
     background-repeat: no-repeat;
+    padding: 0.208vw;
+    border-radius: 0.208vw;
+    transition: 0.3s ease;
+}
+
+.notification:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: pointer;
 }
 
 .startmenu
@@ -243,7 +312,7 @@ body
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 5vw;
+    gap: 7vw;
     bottom: -90vh;
     width: 37.823vw;
     /* height: 86.8vh; */
