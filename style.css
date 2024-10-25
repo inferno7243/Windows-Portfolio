@@ -241,9 +241,12 @@ body
 .startmenu
 {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
     bottom: -90vh;
-    width: 37.823vw;
-    height: 86.8vh;
+    /* width: 37.823vw; */
+    /* height: 86.8vh; */
     background-color: rgba(32, 32, 32, .3);
     backdrop-filter: blur(200px);
     border-radius: 0.456vw;
