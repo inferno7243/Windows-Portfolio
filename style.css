@@ -1,0 +1,756 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    border-radius: 0px;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 200;
+    border: none;
+}
+
+body
+{
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+}
+#background-video 
+{
+    width: 100dvw;
+    height: 100dvh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.taskbar
+{
+    width: 100dvw;
+    height: 7.7dvh ;
+    background-color: rgba(32, 32, 32, .3);
+    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(70px);
+    position: absolute;
+    bottom: 0;
+    border-radius: 0;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    z-index: 10;
+}
+
+.taskbar .left
+{
+    align-items: center;
+    justify-content: center;
+    padding-left: 1.25vw;
+    width: 9.063vw;
+}
+
+.weather
+{
+    display: flex;
+    align-items: center;
+    gap: 0.833vw;
+}
+
+.icon
+{
+    height: 2.222vh;
+    width: 1.25vw;
+    background-image: url(icons/weather.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.25vw;
+}
+
+.information
+{
+    color: white;
+    font-weight: 200;
+    font-size: 0.729vw;
+}
+
+.taskbar .middle
+{
+    align-items: center;
+    justify-content: center;
+}
+
+.taskbar-apps
+{
+    height: 100%;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 0.417vw;
+}
+
+.app1
+{
+    width: 2.083vw;
+    height: 3.704vh;
+    background-image: url(icons/windows\ icon.svg);
+    background-size: 1.563vw;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.app2
+{
+    width: 2.083vw;
+    height: 3.704vh;
+    background-image: url(icons/Search\ Icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 1.563vw;
+    background-position: center;
+}
+.app3
+{
+    width: 2.083vw;
+    height: 3.704vh;
+    background-image: url(icons/Wedget\ Icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 1.563vw;
+    background-position: center;
+}
+.app4
+{
+    width: 2.083vw;
+    height: 3.704vh;
+    background-image: url(icons/folder\ Icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 1.563vw;
+    background-position: center;
+}
+.app5
+{
+    width: 2.083vw;
+    height: 3.704vh;
+    background-image: url(icons/Edge\ Icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 1.563vw;
+    background-position: center;
+}
+.app6
+{
+    width: 2.083vw;
+    height: 3.704vh;
+    background-image: url(icons/figma.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 1.563vw;
+    background-position: center;
+}
+
+
+
+.taskbar .right
+{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-right: 1.25vw;
+}
+
+.quick-settings
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.417vw;
+}
+
+.up-icon
+{
+    height: 2.222vh;
+    width: 1.25vw;
+    background-image: url(sml-icons/up.svg);
+    background-position: center;
+    background-size: 1.042vw;
+    background-repeat: no-repeat;
+    
+}
+
+.language
+{
+    height: 3.519vh;
+    width: 1.771vw;
+    background-image: url(sml-icons/ENG\ IN.svg);
+    background-position: center;
+    background-size: 1.25vw;
+    background-repeat: no-repeat;
+}
+
+.icons
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.208vw;
+}
+
+.wifi
+{
+    height: 1.852vh;
+    width: 1.042vw;
+    background-image: url(sml-icons/WiFi.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.042vw;
+}
+.volume
+{
+    height: 1.852vh;
+    width: 1.042vw;
+    background-image: url(sml-icons/Speaker.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0.938vw;
+}
+.battery
+{
+    height: 1.852vh;
+    width: 1.042vw;
+    background-image: url(sml-icons/Battery.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.042vw;
+}
+
+.notification
+{
+    height: 2.222vh;
+    width: 1.25vw;
+    background-image: url(sml-icons/Bell.svg);
+    background-position: center;
+    background-size: 1.042vw;
+    background-repeat: no-repeat;
+}
+
+.startmenu
+{
+    position: absolute;
+    bottom: -90vh;
+    width: 37.823vw;
+    height: 86.8vh;
+    background-color: rgba(32, 32, 32, .3);
+    backdrop-filter: blur(200px);
+    border-radius: 0.456vw;
+    transition: 0.3s ease-in;
+    transition: 0.13s ease-out;
+}
+
+.search-bar
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.593vh;
+    margin-left: 1.25vw;
+    margin-right: 1.25vw;
+    height: 4.286vh;
+    border-radius: 0.26vw;
+    border-bottom: 2px solid rgba(96, 205, 255, 1);
+    background-color: rgba(30, 30, 30, .3);
+    backdrop-filter: blur(70px);
+    align-items: center;
+    color: rgba(255, 255, 255,.7);
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 200;
+
+}
+
+.search-placeholder
+{
+    align-content: center;
+    justify-content: center;
+    padding-left: 1.25vw;
+}
+
+.search-placeholder input
+{
+    
+    width: 20.833vw;
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255,.7);
+    font-size: 0.833vw;
+    font-weight: 100;
+}
+
+.search-placeholder input::placeholder
+{
+    color: rgba(255, 255, 255,.7);
+}
+
+.search-placeholder input:focus
+{
+    border: none;
+    outline: none;
+}
+
+.pinned-apps
+{
+    margin-top: 3.943vh;
+    color: white;
+}
+
+.rcmnd-apps
+{
+    margin-top: 3.943vh;
+    color: white;
+}
+
+.pinned-apps-title
+{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+}
+
+.rcmnd-apps-title
+{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+}
+
+.startmenu .pinned-apps-div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.438vh;
+}
+
+.startmenu .pinned-apps-div .apps
+{
+    width: 4.167vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.752vh 0.825vw;
+    border-radius: 0.208vw;
+}
+
+.startmenu .pinned-apps-div .apps:hover
+{
+    background-color:rgba(255, 255, 255,.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+
+.startmenu .pinned-apps-div .apps img
+{
+    height: 3.943vh;
+    width: 1.875vw;
+    border-radius: 0.208vw;
+}
+
+.startmenu .pinned-apps-div .apps p
+{
+    text-align: center;
+    font-size: 0.729vw;
+    letter-spacing: 0.026vw;
+    margin-top: 1.095vh;
+    text-wrap: nowrap;
+}
+
+.pinned-apps-div .row01
+{
+    display: flex;
+}
+
+.pinned-apps-div .row02
+{
+    display: flex;
+}
+
+.pinned-apps-div .row03
+{
+    display: flex;
+}
+
+.all-apps
+{
+    background-color: rgba(255, 255, 255,.2);
+    padding: 0.438vh 0.417vw;
+    border-radius: 0.208vw;
+    text-align: center;
+    font-size: 0.833vw;
+}
+
+.all-apps:hover
+{
+    background-color: rgba(0, 0, 0,.2);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.more-apps:hover
+{
+    background-color: rgba(0, 0, 0,.2);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.more-apps
+{
+    background-color: rgba(255, 255, 255,.2);
+    padding: 0.438vh 0.417vw;
+    border-radius: 0.208vw;
+    text-align: center;
+    font-size: 0.833vw;
+}
+
+.txt-pinned
+{
+    font-weight: 400;
+    font-size: 0.833vw;
+}
+
+.txt-rcmnd
+{
+    font-weight: 400;
+    font-size: 0.833vw;
+}
+
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    background-color:rgba(0, 0, 0,.2);
+    padding: 1.752vh 0px;
+}
+
+.footer .right
+{
+    margin-right: 2.5vw;
+}
+
+
+.footer .left
+{
+    display: flex;
+    width: auto;
+    margin-left: 2.5vw;
+    justify-content: center;
+    align-items: center;
+    padding: 0.876vh 0.833vw;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.footer .left:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: pointer;
+}
+
+.footer .user-icon
+{
+    width: 1.875dvw;
+    height: 3.943dvh;
+    background-color: whitesmoke;
+    border-radius: 200px;
+    transition: 0.3s ease;
+}
+
+.footer .user-icon:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: none;
+}
+
+.footer .user-name
+{
+    margin-left: 0.625vw;
+    color: white;
+    font-size: 0.833vw;
+}
+
+.footer .power-icon
+{
+    background-image: url(sml-icons/Power.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.146vw;
+    width: 1.875vw;
+    height: 3.943vh;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.footer .power-icon:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: pointer;
+}
+
+.rcmnd-apps-div .row01
+{
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.629vh 2.5vw;
+}
+
+.rcmnd-apps-div .toggle img
+{
+    height: 5.257vh;
+    width: 2.5vw;
+    border-radius: 4px;
+}
+
+.rcmnd-apps-div .toggle p
+{
+    margin-left: 0.417vw;
+}
+
+.rcmnd-apps-div .toggle .rcmnd-txt
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.rcmnd-apps-div .toggle .rcmnd-txt .file-name
+{
+    font-size: 0.781vw;
+}
+
+.rcmnd-apps-div .toggle .rcmnd-txt .time
+{
+    font-size: 0.677vw;
+}
+
+.rcmnd-apps-div .toggle
+{
+    width: 10.417vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.438vh 0.417vw;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.rcmnd-apps-div .toggle:hover
+{
+    background-color: rgba(255, 255, 255,.1);
+    cursor: pointer;
+}
+
+.lockscreen-time
+{
+    color: white;
+    font-size: 4.688vw;
+    font-weight: 650;
+    text-align: center;
+    padding-top: 5.257vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.lockscreen-wedget
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ls-wedget-container
+{
+    background-color: rgba(0, 0, 0,.4);
+    border: 2px solid rgba(255, 255, 255,.2);
+    backdrop-filter: blur(20px);
+    width: 15.625vw;
+    border-radius: 0.417vw;
+    position: absolute;
+    bottom: 9vh;
+}
+
+.ls-wedget-header
+{
+    padding-top: 1.314vh;
+    padding-left: 0.833vw;
+    color: white;
+    font-weight: 500;
+    font-size: 0.833vw;
+}
+
+.ls-wedget-middle
+{
+    display: flex;
+    align-items: center;
+    padding: 1.314vh 0.833vw;
+    gap: 0.833vw;
+}
+
+.ls-wedget-footer
+{
+    color: rgba(96, 205, 255, 1);
+    font-size: 0.729vw;
+    text-align: center;
+    padding-bottom: 1.314vh;
+    font-weight: 400;
+}
+
+.lockscreen-wedget .ls-wedget-middle .location
+{
+    color: white;
+    font-size: 0.833vw;
+    font-weight: 500;
+}
+
+.lockscreen-wedget .ls-wedget-middle .status
+{
+    color: rgb(0, 255, 0);
+    font-weight: 500;
+    font-size: 0.729vw;
+}
+
+.lockscreen-wedget .ls-wedget-middle img
+{
+    width: 6.25vw;
+    height: 8.762vh;
+    object-fit: cover;
+    border-radius: 0.313vw;
+    border: 2px solid rgba(255, 255, 255,.2);
+}
+
+.ls-container
+{
+    backdrop-filter: blur(70px);
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.ls-main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30vh;
+}
+
+.ls-main .user-profile-icon
+{
+    width: 6.25vw;
+    height: 13.143vh;
+    border-radius: 10.417vw;
+    background-color: white;
+    padding: 1.314vh 0.625vw;
+}
+
+.ls-main .user-profile-name
+{
+    padding: 1.314vh 0.625vw;
+    color: white;
+    font-size: 1.25vw;
+    font-weight: 400;
+}
+
+
+.password-placeholder
+{
+    align-content: center;
+    justify-content: center;
+    padding-left: 0.833vw;
+}
+
+.password-placeholder input
+{
+    width: 20.833vw;
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255,.7);
+    font-size: 0.833vw;
+    font-weight: 100;
+}
+
+.password-placeholder input::placeholder
+{
+    color: rgba(255, 255, 255,.7);
+}
+
+.password-placeholder input:focus
+{
+    border: none;
+    outline: none;
+}
+
+.password-bar
+{
+    display: flex;
+    flex-direction: row;
+    width: 13.021vw;
+    height: 3.286vh;
+    border-radius: 0.26vw;
+    border-bottom: 2px solid rgba(96, 205, 255, 1);
+    background-color: rgba(30, 30, 30, .3);
+    backdrop-filter: blur(70px);
+    align-items: center;
+    color: rgba(255, 255, 255,.7);
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 200;
+
+}
+
+.ls-main p
+{
+    font-size: 0.833vw;
+}
+
+.ls-main p
+{
+    color: white;
+    margin-top: 1.314vh;
+}
+
+.ls-icons
+{
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 0.417vw;
+    align-items: center;
+    position: absolute;
+    bottom: 0.876vh;
+    right: 0.833vw;
+}
+
+.ls-icons-icon img
+{
+    width: 1.25vw;
+    height: 2.629vh;
+}
+
+
+
+
+
+
+
