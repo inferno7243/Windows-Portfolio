@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lock-Screen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="lockscreen">
+        <video id="background-video" poster="Windows-11-Bloom-Screensaver-Dark-1600x900.jpg" autoplay loop muted >
+            <source src="windows11livewallpaper-rev2-1920x1080.mp4" type="video/mp4">
+            </video>
+        <div class="lockscreen-time" id="lockscreen-time" >12:00</div>
+        <div class="lockscreen-wedget">
+            <div class="ls-wedget-container">
+                <div class="ls-wedget">
+                    <div class="ls-wedget-header">Traffic near you</div>
+                    <div class="ls-wedget-middle"><img src="map sector 62.png" alt=""> <div class="ls-wedget-txt"><p class="location">Sector 62, Noida</p><p class="status">Faster than usual</p></div></div>
+                    <div class="ls-wedget-footer">see more traffic updates</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        setInterval(setTime, 1000);
+        setTime();
+        function setTime() {
+            var dt = new Date();
+            time = dt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            document.getElementById('date-time').innerHTML = time;
+        }
+    </script>
+</body>
+</html>
