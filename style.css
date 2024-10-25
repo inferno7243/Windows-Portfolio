@@ -357,7 +357,7 @@ body
 
 .startmenu .pinned-apps-div .apps img
 {
-    height: 3.943vh;
+    height: 1.875vw;
     width: 1.875vw;
     border-radius: 0.208vw;
 }
@@ -470,7 +470,7 @@ body
 .footer .user-icon
 {
     width: 1.875dvw;
-    height: 3.943dvh;
+    height: 1.875dvw;
     background-color: whitesmoke;
     border-radius: 200px;
     transition: 0.3s ease;
@@ -518,9 +518,9 @@ body
 
 .rcmnd-apps-div .toggle img
 {
-    height: 5.257vh;
+    height: 2.5vw;
     width: 2.5vw;
-    border-radius: 4px;
+    border-radius: 0.208vw;
 }
 
 .rcmnd-apps-div .toggle p
@@ -551,7 +551,7 @@ body
     justify-content: flex-start;
     align-items: center;
     padding: 0.438vh 0.417vw;
-    border-radius: 4px;
+    border-radius: 0.208vw;
     transition: 0.3s ease;
 }
 
@@ -658,9 +658,9 @@ body
 
 .ls-main .user-profile-icon
 {
-    width: 6.25vw;
-    height: 13.143vh;
-    border-radius: 10.417vw;
+    width: 6.25dvw;
+    height: 6.25dvw;
+    border-radius: 50%;
     background-color: white;
     padding: 1.314vh 0.625vw;
 }
