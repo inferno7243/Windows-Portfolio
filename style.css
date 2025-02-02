@@ -34,7 +34,6 @@ body
 {
     width: 100%;
     height: 7.7vh;
-    height: 7.7dvh;
     background-color: rgba(32, 32, 32, .3);
     backdrop-filter: blur(70px);
     -webkit-backdrop-filter: blur(70px);
