@@ -315,7 +315,7 @@ body
     display: flex;
     flex-direction: column;
     gap: 7vw;
-    bottom: -90dvh;
+    bottom: -90vh;
     width: 37.823vw;
     /* height: 86.8vh; */
     background-color: rgba(32, 32, 32, .3);
